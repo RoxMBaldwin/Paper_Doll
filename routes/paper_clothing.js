@@ -10,4 +10,11 @@ router.get('/clothing/', (request, response) => {
   })
 })
 
+router.get('/outfits/', (request, response) => {
+  queries.getAlloutfits()
+  .then(function(outfit){
+    response.json(outfit)
+  })
+})
+
 module.exports = router
