@@ -1,20 +1,20 @@
 
 exports.seed = function(knex, Promise) {
-  return knex.raw('DELETE FROM "clothing"; ALTER SEQUENCE clothing_id_seq RESTART WITH ')
+  return knex.raw('DELETE FROM "clothing"; ALTER SEQUENCE clothing_id_seq RESTART WITH 13;')
     .then(function(){
       var clothes = [{
         id:1,
-        name:'color-blocked crop',
+        name:'Pantino color-blocked crop',
         image:'https://s3-us-west-1.amazonaws.com/paper-doll/QuadBloxNeutral.png',
         typeOf:'top'
       },{
         id:2,
-        name:'TUK Woodie platforms',
+        name:'T.U.K. Woodie platforms',
         image:'https://s3-us-west-1.amazonaws.com/paper-doll/TUKwoodiePlatforms.png',
         typeOf:'shoes'
       },{
         id:3,
-        name:'ankle booties',
+        name:'Vince Camuto ankle boots',
         image:'https://s3-us-west-1.amazonaws.com/paper-doll/ankleBooties+.png',
         typeOf:'shoes'
       },{
@@ -24,17 +24,17 @@ exports.seed = function(knex, Promise) {
         typeOf:'top'
       },{
         id:5,
-        name:'groovy orange maxi dress',
+        name:'Malouf orange maxi',
         image:'https://s3-us-west-1.amazonaws.com/paper-doll/groovyOrngMaxi.png',
         typeOf:'one-piece'
       },{
         id:6,
-        name:'high-waisted black jeans',
+        name:'BDG high-rise skinny black jeans',
         image:'https://s3-us-west-1.amazonaws.com/paper-doll/highWaistedBlk.png',
         typeOf:'lower'
       },{
         id:7,
-        name:'jeweled cape dress',
+        name:'Andrea Jovine cape dress',
         image:'https://s3-us-west-1.amazonaws.com/paper-doll/jeweledCapeDress.png',
         typeOf:'one-piece'
       },{
@@ -49,20 +49,20 @@ exports.seed = function(knex, Promise) {
         typeOf:'top'
       },{
         id:10,
-        name:'Sour-Puss high-waisted skirt',
+        name:'Eric+Lani Sour-Puss skirt',
         image:'https://s3-us-west-1.amazonaws.com/paper-doll/sourPuss.png',
         typeOf:'lower'
       },{
         id:11,
-        name:'Steve Madden pumps',
+        name:'Steve Madden booties',
         image:'https://s3-us-west-1.amazonaws.com/paper-doll/steveMaddenPumps.png',
         typeOf:'shoes'
       },{
         id:12,
-        name:'Sugarhigh Lovestoned tartan Woody pants',
+        name:'Sugarhigh Lovestoned tartan Woody pant',
         image:'https://s3-us-west-1.amazonaws.com/paper-doll/sugarHighWoolTartan.png',
         typeOf:'lower'
       }]
-      return knex('clothing').insert(clothes)
+      return knex('clothing').insert(clothes);
     })
 };
