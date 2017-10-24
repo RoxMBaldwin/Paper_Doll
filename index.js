@@ -1,7 +1,7 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
-const routes = require('./routes/paper_clothing.js')
+const routes = require('./routes/paper_routes.js')
 
 
 const app = express()

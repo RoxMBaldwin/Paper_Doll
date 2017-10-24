@@ -5,7 +5,11 @@ module.exports = {
     return knex('clothing')
   },
 
-  getAlloutfits: function(){
+  getAlloutfitDays: function(){
     return knex('outfit')
+  },
+
+  getAllOutfits: function(){
+    return knex('clothing_outfit')
   }
 }

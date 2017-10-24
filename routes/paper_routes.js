@@ -10,10 +10,17 @@ router.get('/clothing/', (request, response) => {
   })
 })
 
-router.get('/outfits/', (request, response) => {
-  queries.getAlloutfits()
+router.get('/outfitDays/', (request, response) => {
+  queries.getAlloutfitDays()
   .then(function(outfit){
     response.json(outfit)
+  })
+})
+
+router.get('/outfits/', (request, response) => {
+  queries.getAllOutfits()
+  .then(function(clothing_outfit){
+    response.json(clothing_outfit)
   })
 })
 
