@@ -4,3 +4,4 @@ module.exports = {
   getAllclothes: function(){
     return knex('clothing')
   }
+}
