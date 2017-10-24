@@ -10,6 +10,8 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cors())
 
-app.use('/')
+app.get('/', function(request, response){
+  response.send('working')
+})
 
 app.listen(port)
