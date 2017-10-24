@@ -24,4 +24,11 @@ router.get('/outfits/', (request, response) => {
   })
 })
 
+router.get('/clothingType/', (request, response) => {
+  queries.getClothesByType()
+  .then(function(types){
+    response.json(types)
+  })
+})
+
 module.exports = router

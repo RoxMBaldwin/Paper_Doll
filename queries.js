@@ -11,5 +11,9 @@ module.exports = {
 
   getAllOutfits: function(){
     return knex('clothing_outfit')
+  },
+
+  getClothesByType: function(){
+    return knex('clothing').select('typeOf')
   }
 }
