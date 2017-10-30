@@ -15,5 +15,9 @@ module.exports = {
 
   getClothesByType: function(){
     return knex('clothing').select('typeOf')
+  },
+
+  postNew: function(body){
+  return knex('clothing').insert(body)
   }
 }
