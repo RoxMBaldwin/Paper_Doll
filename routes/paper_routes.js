@@ -39,4 +39,12 @@ router.post('/clothing/', (request, response) => {
   })
 })
 
+router.post('/outfits/', (request, response) => {
+  var body = request.body
+  queries.postNewOutfit(body)
+  .then(function(message){
+    response.json('added new outfit')
+  })
+})
+
 module.exports = router

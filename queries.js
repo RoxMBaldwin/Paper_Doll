@@ -19,5 +19,9 @@ module.exports = {
 
   postNew: function(body){
   return knex('clothing').insert(body)
+  },
+
+  postNewOutfit: function(body){
+    return knex('clothing_outfit').insert(body)
   }
 }
